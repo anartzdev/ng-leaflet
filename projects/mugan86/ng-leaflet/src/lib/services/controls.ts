@@ -54,11 +54,11 @@ class Controls {
 
         return layers.reduce((a, layer) => {
             return (!layer.default) ? ({ // Add NO default layers
-                ...a, [layer.label]: tileLayerSelect(layer.map, {
+                ...a, [layer.label || '']: tileLayerSelect(layer.map, {
                     attribution: layer.atribution
                 })
             }) : {
-                ...a, ...{ [layer.label]: defaultLayer } // Map Default select layer
+                ...a, ...{ [layer.label || '']: defaultLayer } // Map Default select layer
             }
         }, {} // Start value
         );

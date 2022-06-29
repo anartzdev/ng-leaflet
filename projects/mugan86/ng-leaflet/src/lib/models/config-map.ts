@@ -1,11 +1,12 @@
 import { ControlPosition } from "leaflet";
 import { MarkerColorOptions } from "../config/markers/default";
-import { ILayers, IScaleOptions, IWatermarkOptions, IZoomOptions } from "./controls";
+import { ILayers, IScaleOptions, IWatermarkOptions, IZoomOptions, IBaseLayer } from './controls';
 
 export interface IConfigMap {
     markerColor?: MarkerColorOptions;
     center?: [number, number];
     scale?: IScaleOptions | undefined;
+    defaultLayer?: IBaseLayer;
     layers?: ILayers;
     zoom?: IZoomOptions;
     fullscreen?: boolean;

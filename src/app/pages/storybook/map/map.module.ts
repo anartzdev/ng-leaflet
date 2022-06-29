@@ -12,8 +12,11 @@ const config: IConfigMap = {
     position: 'topright'
   },
   watermark: {
-    show: true,
     position: 'topleft'
+  },
+  /*defaultLayer: {
+    map: 'https://tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey=47455e4b0807408c87ead5d6f7a8d1c8',
+    atribution: tileLayers.baseLayers.default.atribution
   },
   layers: {
     baseLayers: [{
@@ -27,7 +30,7 @@ const config: IConfigMap = {
       map: tileLayers.baseLayers.cycloOsm.map,
       atribution: tileLayers.baseLayers.cycloOsm.atribution
     }]
-  },
+  },*/
   drawRoute: {
     active: true,
     showControl: true

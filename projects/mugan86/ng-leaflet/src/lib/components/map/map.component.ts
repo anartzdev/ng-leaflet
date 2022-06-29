@@ -109,7 +109,11 @@ export class MapComponent implements AfterViewInit {
       this.config!.scale = this.defaultConfig.get().config.scale;
     }
 
-    if (!this.config!.layers && this.defaultConfig.get().config.layers) {
+    if (!this.config!.defaultLayer && this.defaultConfig.get().config.defaultLayer) {
+      this.config!.defaultLayer = this.defaultConfig.get().config.defaultLayer;
+    }
+
+    if (!this.config!.layers && !this.config?.defaultLayer && this.defaultConfig.get().config.layers) {
       this.config!.layers = this.defaultConfig.get().config.layers;
     }
 
